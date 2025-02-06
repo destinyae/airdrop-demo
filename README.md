@@ -18,7 +18,7 @@ the creator chain focuses on distributing tokens and preventing replay attacks.
 ## Eligibility Verification
 
 For each claim, Space-and-Time's network is queried using the
-[Gateway](https://docs.spaceandtime.io/docs/secrets-proxy) to check that the claim is eligible to
+[Gateway](https://docs.spaceandtime.io/docs/secrets-proxy) to check that the claim is eligible for
 the airdrop. The query simply checks if the address had a minimum balance at a specific snapshot
 block height.
 
@@ -27,7 +27,7 @@ proposing the block as well as each validator that validates the block.
 
 The application performs the query from the contract using the service as an oracle. This is needed
 because the service will handle the response and return only the relevant parts, which is what is
-tracked and agreeded upon between the validators. Any sources of non-determinism (e.g., the HTTP
+tracked and agreed upon between the validators. Any sources of non-determinism (e.g., the HTTP
 "Date" header in the response) is filtered out.
 
 ## Web Interface
@@ -41,7 +41,7 @@ This ensures that only the owner of that address can claim the airdrop tokens fo
 ### Verifying Proofs
 
 Usage of the Gateway should be replaced with verification of the zero-knowledge proofs inside the
-application. This would remove the need of the API access token, and allow claimers to obtain query
+application. This would remove the need for the API access token, and allow claimers to obtain query
 proofs through their preferred method.
 
 ### Sharding the Token Distribution
